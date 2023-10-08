@@ -1,0 +1,51 @@
+:root{
+
+  // Primary Colors
+
+  --primary-red: hsl(0, 100%, 67%);
+  --primary-orange-yellow: hsl(39, 100%, 56%);
+  --primary-green: hsl(166, 100%, 37%);
+  --primary-blue: hsl(234, 85%, 45%);
+
+  // Neutral
+
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+
+  //Gradients
+
+  --gradient-bg-slate-blue:hsl(252, 100%, 67%);
+  --gradient-bg-royal-blue:hsl(241, 81%, 54%);
+  
+  //Circles
+  --gradient-circ-violet-blue:hsla(256, 72%, 46%, 1);
+  --gradient-circ-persian-blue:hsla(241, 72%, 46%, 0);
+  
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 112.5%;
+}
+
+body{
+  font-family: 'hankenGrotesk', sans-serif;
+  font-weight: 500;
+  background-color: var(--pale-blue);
+}
+
+.container{
+  &--main{
+    background-color: var(--white);
+  
+  }
+  &--result{
+
+  }
+}
