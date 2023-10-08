@@ -7,10 +7,10 @@
   --pale-blue: hsl(221, 100%, 96%);
   --light-lavender: hsl(241, 100%, 89%);
   --dark-gray-blue: hsl(224, 30%, 27%);
-  --gradient-bg-slate-blue:hsl(252, 100%, 67%);
-  --gradient-bg-royal-blue:hsl(241, 81%, 54%);
-  --gradient-circ-violet-blue:hsla(256, 72%, 46%, 1);
-  --gradient-circ-persian-blue:hsla(241, 72%, 46%, 0);
+  --gradient-bg-slate-blue: hsl(252, 100%, 67%);
+  --gradient-bg-royal-blue: hsl(241, 81%, 54%);
+  --gradient-circ-violet-blue: hsla(256, 72%, 46%, 1);
+  --gradient-circ-persian-blue: hsla(241, 72%, 46%, 0);
 }
 
 * {
@@ -30,4 +30,31 @@ body {
 
 .container--main {
   background-color: var(--white);
+  border-radius: 32px;
+  width: 47vw;
+  height: 35vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.container--result {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  width: 50%;
+  border-radius: 1.7778em;
+  background: linear-gradient(to top, var(--gradient-bg-royal-blue) 0%, var(--gradient-bg-slate-blue) 100%);
+}
+.container--result .result {
+  text-align: center;
+  color: var(--pale-blue);
+}
+.container--summary {
+  display: flex;
+  align-items: center;
+}
+.container--summary .summary {
+  justify-content: center;
 }/*# sourceMappingURL=styles.css.map */
