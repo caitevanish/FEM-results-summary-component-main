@@ -2,6 +2,11 @@
 $desktop: 80em; // 1440px/18x
 $mobile: 20.8333em; // 375px/18px
 
+@font-face {
+  font-family: 'HankenGrotesk';
+  src: url('assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+
 :root {
   // Primary Colors
 
@@ -20,7 +25,7 @@ $mobile: 20.8333em; // 375px/18px
   //Gradients
 
   --gradient-bg-slate-blue: hsl(252, 100%, 67%);
-  --gradient-bg-royal-blue: hsl(241, 81%, 54%);
+  --gradient-bg-royal-blue: hsl(241, 81%, 54%); 
 
   //Circles
   --gradient-circ-violet-blue: hsla(256, 72%, 46%, 1);
@@ -46,28 +51,40 @@ html {
 body {
   font-family: 'hankenGrotesk', sans-serif;
   font-weight: 500;
+  font-size: 1rem;
   background-color: var(--pale-blue);
+}
+
+//Global
+.header {
+  font-size: 1.333rem;
+  font-weight: 700;
+  // padding-top: 38px;
 }
 
 .container {
   &--main {
+    display: flex;
+
     background-color: var(--white);
     border-radius: 32px; //change!
-    width: 47vw;
-    height: 35vh;
+    width: 51%;
+    height: 47%;
     position: absolute;
     @include center-position();
-
-    display: flex;
   }
+
   &--result {
     display: flex;
-    justify-content: center;
-    align-content: space-between;
-    // align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+
+    text-align: center;
+    color: var(--pale-blue);
 
     width: 50%;
     border-radius: 1.7778em;
+    padding: 2em;
 
     background: linear-gradient(
       to top,
@@ -76,11 +93,55 @@ body {
     );
 
     .result {
-      text-align: center;
-      color: var(--pale-blue);
+      // &--intro {
+      // }
+      &--score {
+        display: flex;
+        background-color: var(--gradient-bg-royal-blue);
+        justify-content: center;
+        flex-direction: column;
 
-      &--intro {
-        &-small {
+        // height: 200px;
+        // width: 200px;
+        flex-basis: 200px;
+        flex-grow: 0;
+        flex-shrink: 0;
+
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+
+        // margin: 1em;
+
+        &-lg {
+          display: flex;
+          justify-content: center;
+          font-size: 4rem;
+          font-weight: 800;
+          color: white;
+        }
+
+        &-sm {
+          display: flex;
+          justify-content: center;
+          font-size: 1rem;
+          color: var(--pale-blue);
+        }
+      }
+      &--rank {
+        flex: display;
+        display: column;
+
+        &-lg {
+          font-size: 32px;
+          font-weight: 700;
+          // padding: 0.75em;
+        }
+        &-sm {
+          font-size: 1rem;
+          font-weight: 500;
+          color: var(--pale-blue);
+          line-height: normal;
+          padding: 1em 1em 0;
         }
       }
     }
@@ -88,9 +149,9 @@ body {
   &--summary {
     display: flex;
     align-items: center;
+    // justify-content: center;
 
-    .summary {
-      justify-content: center;
-    }
+    // &-lg {
+    // }
   }
 }

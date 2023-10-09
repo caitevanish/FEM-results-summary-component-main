@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "HankenGrotesk";
+  src: url("assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
 :root {
   --primary-red: hsl(0, 100%, 67%);
   --primary-orange-yellow: hsl(39, 100%, 56%);
@@ -25,36 +29,77 @@ html {
 body {
   font-family: "hankenGrotesk", sans-serif;
   font-weight: 500;
+  font-size: 1rem;
   background-color: var(--pale-blue);
 }
 
+.header {
+  font-size: 1.333rem;
+  font-weight: 700;
+}
+
 .container--main {
+  display: flex;
   background-color: var(--white);
   border-radius: 32px;
-  width: 47vw;
-  height: 35vh;
+  width: 51%;
+  height: 47%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
 }
 .container--result {
   display: flex;
-  justify-content: center;
-  align-content: space-between;
-  width: 50%;
-  border-radius: 1.7778em;
-  background: linear-gradient(to top, var(--gradient-bg-royal-blue) 0%, var(--gradient-bg-slate-blue) 100%);
-}
-.container--result .result {
+  flex-direction: column;
+  justify-content: space-around;
   text-align: center;
   color: var(--pale-blue);
+  width: 50%;
+  border-radius: 1.7778em;
+  padding: 2em;
+  background: linear-gradient(to top, var(--gradient-bg-royal-blue) 0%, var(--gradient-bg-slate-blue) 100%);
+}
+.container--result .result--score {
+  display: flex;
+  background-color: var(--gradient-bg-royal-blue);
+  justify-content: center;
+  flex-direction: column;
+  flex-basis: 200px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+.container--result .result--score-lg {
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+}
+.container--result .result--score-sm {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--pale-blue);
+}
+.container--result .result--rank {
+  flex: display;
+  display: column;
+}
+.container--result .result--rank-lg {
+  font-size: 32px;
+  font-weight: 700;
+}
+.container--result .result--rank-sm {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--pale-blue);
+  line-height: normal;
+  padding: 1em 1em 0;
 }
 .container--summary {
   display: flex;
   align-items: center;
-}
-.container--summary .summary {
-  justify-content: center;
 }/*# sourceMappingURL=styles.css.map */
