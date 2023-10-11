@@ -4,12 +4,11 @@ $mobile: 20.8333em; // 375px/18px
 
 @font-face {
   font-family: 'HankenGrotesk';
-  src: url('assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+  src: url('/assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
 }
 
 :root {
   // Primary Colors
-
   --primary-red: hsl(0, 100%, 67%);
   --primary-orange-yellow: hsl(39, 100%, 56%);
   --primary-green: hsl(166, 100%, 37%);
@@ -25,7 +24,7 @@ $mobile: 20.8333em; // 375px/18px
   //Gradients
 
   --gradient-bg-slate-blue: hsl(252, 100%, 67%);
-  --gradient-bg-royal-blue: hsl(241, 81%, 54%); 
+  --gradient-bg-royal-blue: hsl(241, 81%, 54%);
 
   //Circles
   --gradient-circ-violet-blue: hsla(256, 72%, 46%, 1);
@@ -62,6 +61,10 @@ body {
   // padding-top: 38px;
 }
 
+.padding {
+  padding: 2em;
+}
+
 .container {
   &--main {
     display: flex;
@@ -84,7 +87,6 @@ body {
 
     width: 50%;
     border-radius: 1.7778em;
-    padding: 2em;
 
     background: linear-gradient(
       to top,
@@ -146,12 +148,59 @@ body {
       }
     }
   }
+
+  ///////////////////////////////////////
+  /// SUMMARY CONTAINER//////////////////
+  ///////////////////////////////////////
+  ///
   &--summary {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: stretch;
+
+    width: 50%;
     // justify-content: center;
 
-    // &-lg {
+    // & > .summary--section {
+    //   color: teal;
     // }
+    // .summary--scores > .summary--section {
+    //   display: flex;
+    //   flex-direction: column;
+    // }
+
+    .section-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      font-size: 1em;
+      font-weight: 500;
+      padding: 1em;
+      margin-bottom: 1em;
+      border-radius: 0.75em;
+
+      & .icon-text {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+    .section-1 {
+      background: hsla(var(--primary-red), 0.5);  //Doesn't work :(
+      background: rgba(red, 0.5);               //works!
+
+
+      &:first-child p {
+        color: hsl(var(--primary-red));
+        color: hsla(var(--primary-red), 0.5);
+      }
+
+    }
+
+    & span {
+      font-weight: 700;
+    }
   }
 }

@@ -1,6 +1,6 @@
 @font-face {
   font-family: "HankenGrotesk";
-  src: url("assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+  src: url("/assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
 }
 :root {
   --primary-red: hsl(0, 100%, 67%);
@@ -38,6 +38,10 @@ body {
   font-weight: 700;
 }
 
+.padding {
+  padding: 2em;
+}
+
 .container--main {
   display: flex;
   background-color: var(--white);
@@ -57,7 +61,6 @@ body {
   color: var(--pale-blue);
   width: 50%;
   border-radius: 1.7778em;
-  padding: 2em;
   background: linear-gradient(to top, var(--gradient-bg-royal-blue) 0%, var(--gradient-bg-slate-blue) 100%);
 }
 .container--result .result--score {
@@ -101,5 +104,34 @@ body {
 }
 .container--summary {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: stretch;
+  width: 50%;
+}
+.container--summary .section-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 0.75em;
+}
+.container--summary .section-row .icon-text {
+  display: flex;
+  flex-direction: row;
+}
+.container--summary .section-1 {
+  background: hsla(var(--primary-red), 0.5);
+  background: rgba(255, 0, 0, 0.5);
+}
+.container--summary .section-1:first-child p {
+  color: hsl(var(--primary-red));
+  color: hsla(var(--primary-red), 0.5);
+}
+.container--summary span {
+  font-weight: 700;
 }/*# sourceMappingURL=styles.css.map */
